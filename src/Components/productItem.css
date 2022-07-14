@@ -1,0 +1,38 @@
+.product-item {
+  flex: 1;
+  height: 70vh;
+  margin: 3px;
+}
+.product-item-wrapper {
+  margin: 15px 0;
+}
+.item-title {
+  font-size: 24px;
+  font-weight: 500;
+}
+.item-price {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 900px) {
+  .product-item {
+    height: 20vh;
+  }
+}
+
+/*
+
+
+<img src={item.img} alt="" className="image" />
+      <div className="info">
+        <h1>{item.title}</h1>
+        <button>Shop Now</button>
+      </div>
+
+*/
