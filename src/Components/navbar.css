@@ -2,6 +2,7 @@
   height: 85px;
   position: sticky;
   top: 0;
+  z-index: 3;
   background-color: white;
 }
 .hamburger {
@@ -64,16 +65,48 @@ li {
   .links {
     display: none;
   }
+  .logo {
+    font-size: 20px;
+  }
+
   .hamburger {
     display: block;
     cursor: pointer;
   }
+  .hamburger .spun {
+    transition: all 0.4s ease-in-out;
+  }
+  .active.hamburger {
+    transition-delay: 0.8s;
+    transform: rotate(45deg);
+  }
+  .active.hamburger .span-two {
+    width: 0;
+  }
+  .active.hamburger .span-one,
+  .active.hamburger .span-three {
+    transition-delay: 0.4s;
+  }
+
+  .active.hamburger .span-one {
+    transform: translateY(9px);
+  }
+
+  .active.hamburger .span-three {
+    transform: translateY(-9px) rotate(90deg);
+  }
   .spun {
     background-color: black;
     height: 2px;
-    width: 5px;
+    width: 28px;
     border-radius: 2px;
-    margin: 2px;
+  }
+  .span-one {
+    margin-bottom: 7px;
+  }
+
+  .span-two {
+    margin-bottom: 7px;
   }
   .search-container {
     display: none;

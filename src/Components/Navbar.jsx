@@ -3,12 +3,16 @@ import LocalMallOutlinedIcon from "@mui/icons-material/LocalMallOutlined";
 import React from "react";
 import "./navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ open, setOpen }) => {
   return (
     <div className="navbar">
       <div className="wrapper">
         <div className="center">
-          <div className="hamburger">
+          <div
+            className={"hamburger " + (open && "active")}
+            open={open}
+            onClick={() => setOpen(!open)}
+          >
             <div className="span-one spun"></div>
             <div className="span-two spun"></div>
             <div className="span-three spun"></div>
